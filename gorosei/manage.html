@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/manage.css">
+    <link rel="shortcut icon" type="x-icon" href="../assets/logoR.PNG">
+    <title>Manage-saharaoui</title>
+</head>
+<body>
+    <div id="orderModal" class="modal hidden">
+        <div class="modal-content">
+          
+          <div class="comp">
+            <h3>Effectuer une commande</h3>
+            <span class="close-button">&times;</span>
+          </div>
+          <form id="orderForm" enctype="multipart/form-data">
+            <div class="comp">
+              <label for="image"> ajouter une image</label>
+              <input type="file" id="image-publication" name="image" accept="image/*">
+            </div>
+            <div class="comp">
+              <label for="itemName">Nn om du plat :</label>
+              <input type="text" id="itemName" name="itemName" required />
+            </div>
+            <div class="comp">
+              <label for="quantity">Quantité :</label>
+              <input type="number" id="quantity" required name="quantity" min="1" value="1" />
+            </div>
+            <div class="comp">
+              <label for="numeroTel">Prix:</label>
+              <input type="text" id="price" name="price" placeholder="Prix du plat 2500 ">
+            </div>
+            <div class="comp">
+              <label for="paiement">Categorie</label>
+              <select class="select" name="paiement" id="paie">
+                <option value="1">PATISSERIE</option>
+                <option value="2">GRIADE</option>
+                <option value="3">BAR</option>
+              </select>
+            </div>
+            <div class="comp">
+              <label for="comments">Commentaires :</label>
+              <textarea id="comments" name="comments" placeholder="Description de l'aliment"></textarea>
+            </div>
+            <input type="text" class="hidden" value="1" readonly>
+            <button type="submit" class="btn">Modifiez</button>
+            <button type="submit" class="btn red">SUPPRIMER</button>
+          </form>
+          <a href="">Comment fonctione une modification</a>
+        </div>
+    </div>
+    <div class="bcg">
+        <img src="../assets/IMG_0480.JPG" alt="">
+        <div class="filtre"></div>
+    </div>
+    <nav>
+       <!-- <img src="./assets/logoR.jpeg" alt="Logo du restaurant"> -->
+       <h1>Gestion du site</h1>
+       <button id="backButton" class="hidden">Back</button>
+    </nav>
+    <div class="contenaire">
+
+        <div class="sectionBouton">
+            <button class="option opt1" data-target="Commande">Commande</button>
+            <button class="option opt2" data-target="PlatJour">Catalogue</button>
+            <button class="option opt3" data-target="Vedette">En Vedette</button>
+            <button class="option opt4" data-target="MessageReçu">Message reçu</button>
+            <button class="option opt5" data-target="Trafique">Trafique sur le site</button>
+            <button class="option opt6" data-target="Parametre">Paramètres du site</button>
+        </div>
+    
+        <section class="section" id="Commande">
+            <a href="">Historique</a>
+            
+            <div class="cadreCommande">
+                <h3>
+                    PIZZA FROMAGE (5)
+                </h3>
+                <p><strong>Date:</strong> 22/01/2025, 18:15</p>
+                <p><strong>Tel:</strong> +221 78 194 13  51</p>
+                <p><strong>Statut de la commande:</strong> <span class="red">Non livré</span></p>
+                <p><strong>Statut de paiement:</strong> <span class="green">Payé</span></p>
+                <div class="btn"><button>Fin de la commande</button></div>
+            </div>
+            <div class="cadreCommande">
+                <h3>
+                    PIZZA FROMAGE (5)
+                </h3>
+                <p><strong>Date:</strong> 22/01/2025, 18:15</p>
+                <p><strong>Tel:</strong> +221 78 194 13  51</p>
+                <p><strong>Statut de la commande:</strong> <span class="red">Non livré</span></p>
+                <p><strong>Statut de paiement:</strong> <span class="green">Payé</span></p>
+                <div class="btn"><button>Fin de la commande</button></div>
+                
+            </div>
+            <div class="cadreCommande">
+                <h3>
+                    PIZZA FROMAGE (5)
+                </h3>
+                <p><strong>Date:</strong> 22/01/2025, 18:15</p>
+                <p><strong>Tel:</strong> +221 78 194 13  51</p>
+                <p><strong>Statut de la commande:</strong> <span class="red">Non livré</span></p>
+                <p><strong>Statut de paiement:</strong> <span class="green">Payé</span></p>
+                <div class="btn"><button>Fin de la commande</button></div>
+            </div>
+        </section>
+        <section class="section" id="PlatJour">
+
+          <button id="addNewItemButton" class="btn">Ajouter un nouveau plat</button>
+           <h2>Plat du jour</h2>
+           <main>
+
+            <!-- PATISSERIE Category -->
+            <section class="category ">
+               <h2>PATISSERIE</h2>
+               <div class="items">
+                   
+               </div>
+           </section>
+   
+   
+           <!-- GRIADE Category -->
+           <section class="category">
+               <h2>GRIADE</h2>
+               <div class="items">
+                   
+                   
+               </div>
+           </section>
+       </main>
+        </section>
+        <section class="section " id="Vedette">
+           <h2>Catalogue</h2>
+           <p>Gérez les articles disponibles dans le catalogue du restaurant.</p>
+        </section>
+        <section class="section " id="MessageReçu">
+           <h2>Messages reçus</h2>
+
+           <div class="messages">
+            <div class="msg">
+              <h3>Lamin camara</h3>
+              <p>Reserve pour le 21/4/2025 a 15:30</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad corrupti nam fugit rerum quod vel! Corporis sequi ex repellat asperiores repudiandae vero quis placeat dicta quo mollitia, exercitationem unde.</p>
+            </div>
+
+            <div class="msg">
+              <h3>Lamin camara</h3>
+              <p>Reserve pour le 21/4/2025 a 15:30</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad corrupti nam fugit rerum quod vel! Corporis sequi ex repellat asperiores repudiandae vero quis placeat dicta quo mollitia, exercitationem unde.</p>
+            </div>
+
+            <div class="msg">
+              <h3>Lamin camara</h3>
+              <p>Reserve pour le 21/4/2025 a 15:30</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ad corrupti nam fugit rerum quod vel! Corporis sequi ex repellat asperiores repudiandae vero quis placeat dicta quo mollitia, exercitationem unde.</p>
+            </div>
+           </div>
+        </section>
+        <section class="section " id="Trafique">
+           <h2>Trafic sur le site</h2>
+           <p>Analysez les données de fréquentation de votre site web.</p>
+        </section>
+        <section class="section " id="Parametre">
+           <h2>Paramètres du site</h2>
+           <p>Modifiez les paramètres généraux de votre site.</p>
+        </section>
+    </div>
+    <script src="../js/manage.js"></script>
+    <script src="../js/data.js"></script>
+</body>
+</html>
+
+

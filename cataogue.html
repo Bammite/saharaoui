@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catalogue Restaurant</title>
+        <link rel="stylesheet" href="/css/catalogue.css">
+    
+</head>
+<body>
+
+    <div id="orderModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="comp">
+            <h3>Effectuer une commande</h3>
+            <span class="close-button">&times;</span>
+          </div>
+          <form id="orderForm" enctype="multipart/form-data">
+            <div class="comp">
+              <label for="itemName">Nom du plat :</label>
+              <input type="text" id="itemName" name="itemName" required readonly />
+            </div>
+            <div class="comp">
+              <label for="quantity">Quantité :</label>
+              <input type="number" id="quantity" required name="quantity" min="1" value="1" />
+            </div>
+            <div class="comp">
+              <label for="numeroTel">Telephone :</label>
+              <input type="text" placeholder="Ex: +221 78 194 13 51" />
+            </div>
+            <div class="comp">
+              <label for="paiement">Payer par :</label>
+              <select class="select" name="paiement" id="paie">
+                <option value="1">Wave</option>
+                <option value="2">Orange Money</option>
+                <option value="3">Free Money</option>
+                <option value="4">Payer à la livraison</option>
+              </select>
+            </div>
+            <div class="comp">
+              <label for="comments">Commentaires :</label>
+              <textarea id="comments" name="comments" placeholder="Ex : sans oignons..."></textarea>
+            </div>
+            <p id="totalPrice">Prix total : 0 FCFA</p>
+            <button type="submit" class="btn">Valider la commande</button>
+          </form>
+          <details>
+            <summary>Comment fonctionne la commande et la livraison ?</summary>
+            <p>
+              Après avoir validé la commande, le restaurant vous contactera pour relever votre position géographique et
+              vous livrer. En cas de retard de plus de 12h sur le délai de livraison prévu, le restaurant s'engage à
+              rembourser votre argent suivi d'un dédommagement. Vous pouvez également <a href="tel:+221781941351">effectuer
+              directement votre commande</a> en nous contactant.
+            </p>
+          </details>
+        </div>
+      </div>
+    <div class="bacgrd"> 
+
+        <img src="./assets/téléchargement.jpeg" alt="">
+    </div>
+    <div class="filtre"></div>
+    <header class="header">
+       <a href="./index.html"><button class="back-button"><img src="./assets/back.svg" alt=""></button></a> 
+        <button class="search-button" id="searchButton">
+            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search" class="search-icon">
+        </button>
+    </header>
+    <div id="catalogue">
+        <main></main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

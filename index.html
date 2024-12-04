@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="x-icon" href="./assets/sunset.jpeg">
+    <link rel="stylesheet" href="./css/styles.css?v=1.2"/>
+    <title>Restaurant</title>
+  </head>
+  <body>
+
+    <div id="orderModal" class="modal hidden">
+      <div class="modal-content">
+        
+        <div class="comp">
+          <h3>Effectuer une commande</h3>
+          <span class="close-button">&times;</span>
+        </div>
+        <form id="orderForm" enctype="multipart/form-data">
+          <div class="comp">
+            <label for="itemName">Nom du plat :</label>
+            <input type="text" id="itemName" name="itemName" required readonly />
+          </div>
+          <div class="comp">
+            <label for="quantity">Quantité :</label>
+            <input type="number" id="quantity" required name="quantity" min="1" value="1" />
+          </div>
+          <div class="comp">
+            <label for="numeroTel">Telephone:</label>
+            <input type="text" placeholder="Ex: +221 78 194 13 51">
+          </div>
+          
+          <div class="comp">
+            <label for="paiement">Payer par: </label>
+            <select class="select" name="paiement" id="paie">
+              <option value="1">Wave</option>
+              <option value="2">Orange Money</option>
+              <option value="3">Free Money</option>
+              <option value="4">Payer a la livraison</option>
+            </select>
+          </div>
+          <div class="comp">
+            <label for="comments">Commentaires :</label>
+            <textarea id="comments" name="comments" placeholder="Ex : sans oignons..."></textarea>
+          </div>
+          <p id="totalPrice">Prix total : 0 FCFA</p>
+          <button type="submit" class="btn">Valider la commande</button>
+        </form>
+        <details>
+          <summary>Comment foncionne la Commande et la livraison ?</summary>
+          <p>Apres avoir validé la commande Restaurant vous contacteras pour relever votre position geographique et vous l'aporter en cas de retard de plus de 12h sur le delai de livraison prevu, Restaurant s'engage a vous rembourser votre  argent suivie d'un dedomagement. Vous pouvez egalement <a href="tel:+221781941351">effectuer directement votre commande</a> en nous contactant.</p>
+        </details>
+      </div>
+    </div>
+
+
+    <header class="header" id="acceuil">
+      <img src="./assets/slider03.jpg" alt="" class="bckg">
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#" class="logo">
+              <img
+                src="assets/logoR.PNG"
+                alt="logo saharaoui"
+                class="nav__logo-dark"
+              />
+              <img
+                src="assets/logoR.PNG"
+                alt="logo saharaoui"
+                class="nav__logo-white"
+              />Restaurant
+            </a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li>/<a href="#acceuil">ACCEUIL</a>/</li>
+          <!-- <li><a href="#special">SPECIAL</a></li> -->
+          <li>/<a href="#menu">MENU</a>/</li>
+          <li>/<a href="#event">EVENEMENT</a>/</li>
+          <li>/<a href="#contact">CONTACT</a>/</li>
+        </ul>
+      </nav>
+      <!-- <div class="section__container header__container" id="home">
+        <div class="header__image">
+          <img src="assets/chefCusto.svg" alt="header" />
+        </div>
+        <div class="header__content">
+          <h2>COMMANDEZ, SAVOUREZ, SANS BOUGER</h2>
+          <h1><span>FAZ</span><br/>DYNASTIE</h1>
+        </div>
+      </div> -->
+    </header>
+
+    <section class="section__container banner__container" id="special">
+      <div class="banner__card">
+        <p>SPECIALITÉ DU JOUR</p>
+        <h4></h4>
+      </div>
+      <div class="banner__card">
+        <p>LE PLUS POPULAIRE</p>
+        <h4>BURGER <br/>AU POULET</h4>
+      </div>
+      <div class="banner__card">
+        <p>POUR UNE SOIREÉ</p>
+        <h4>ENTRE AMI</h4>
+      </div>
+    </section>
+
+    <section class="section__container order__container" id="menu">
+      <div class="bordertop">
+        <img src="./assets/bordertop-768x112.png" alt="" >
+      </div>
+      <!-- <h2 class="section__header">CHOISIE & PROFITE</h2> -->
+      <p class="section__description">
+        Que vous ayez envie de saveurs classiques ou de combinaisons audacieuses, 
+        c'est ici que votre voyage culinaire commence. Satisfaisez vos envies et 
+        savourez chaque bouchée en créant votre expérience de culinaire personnalisée avec Restaurant.
+      </p>
+      <div class="order__grid" id="orderGrid">
+        
+        
+        
+      </div>
+    </section>
+
+    <section class="section__container event__container" id="event">
+      <div class="event__content">
+        <div class="event__image">
+          <img src="assets/resraurant.jpg" alt="event" />
+        </div>
+        <div class="event__details">
+          <h3>Discover</h3>
+          <h2 class="section__header">POUR VOS EVENEMENT</h2>
+          <p class="section__description">
+            Nous sommes ici pour faire de votre événement un moment inoubliable ! 
+            Que ce soit pour un mariage, un anniversaire, une fête d’entreprise ou 
+            toute autre occasion spéciale, notre équipe est prête à vous accompagner à 
+            chaque étape. Avec une sélection de plats savoureux et un service attentif, 
+            nous nous engageons à répondre à tous vos besoins et à créer une expérience 
+            culinaire qui ravira vos invités. Faites-nous confiance pour transformer votre 
+            événement en une célébration mémorable !
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation" id="contact">
+      <div class="section__container reservation__container">
+        <h3>CONTACT</h3>
+        <h2 class="section__header">RESERVER UNE TABLE</h2>
+        <form action="/">
+          <input type="text" placeholder="NAME"/>
+          <input type="email" placeholder="TEL"/>
+          <input type="date" placeholder="DATE"/>
+          <input type="time" placeholder="TIME"/>
+          <input type="text" placeholder="Decrire vos besoins" />
+          <button class="btn" type="submit">ENVOYER</button>
+        </form>
+      </div>
+      <img
+        src="assets/pizza.png"
+        alt="reservation"
+        class="reservation__bg-1"
+      />
+      <img
+        src="assets/reservation-bg-2.png"
+        alt="reservation"
+        class="reservation__bg-2"
+      />
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__logo">
+          
+            <img
+              src="assets/logoR.PNG"
+              alt="logo Restaurant"
+              class="nav__logo-dark"
+            />
+        </div>
+        <div class="footer__content">
+          <p>
+            Bienvenue au Restaurant, où la passion pour la cuisine d'exception et
+            l'hospitalité authentique se rencontrent. Notre histoire est celle d'un dévouement
+            à créer une expérience culinaire parfaite, de l'approvisionnement des meilleurs
+            ingrédients à la livraison d'un goût incomparable à chaque cuillère.
+          </p>
+          <div>
+            <ul class="footer__links">
+              <li>
+                <span><i class="ri-map-pin-2-fill"></i></span>
+                Saint Louis, 
+              </li>
+              <li>
+                <span><i class="ri-phone-line"></i></span>
+                (+221) 78 194 13 51
+              </li>
+            </ul>
+            <div class="footer__socials">
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#"><i class="ri-whatsapp-fill"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 By Bammite Prince.
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js?v=1.1"></script>
+  </body>
+</html>

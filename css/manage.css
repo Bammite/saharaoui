@@ -1,0 +1,498 @@
+/* Styles généraux */
+:root {
+    --primary-color: #ffc135;
+    --secondary-color: #5b4235;
+    --tertiary-color: #df1c1c;
+    --text-dark: #212529;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --header-font-1: "Alfa Slab One", serif;
+    --header-font-2: "Bebas Neue", sans-serif;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    
+}
+
+
+.bcg{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.bcg img{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bcg .filtre{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgb(0, 0, 0,.5);
+}
+/* Navigation */
+nav {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+nav img {
+    height: 50px;
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+.contenaire{
+    display: flex;
+    
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+#backButton {
+    background-color: white;
+    color: var(--secondary-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+
+#backButton.hidden {
+    display: none;
+}
+
+/* Section des boutons */
+.sectionBouton {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    height: 90vh;
+}
+
+.hidden-boutons {
+    transform: translateX(-100%);
+}
+
+/* Boutons */
+.option {
+    background-color: white;
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 90%;
+    max-width: 600px;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Sections */
+.section {
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(1000%);
+    transition: transform 0.5s ease-in-out;
+    position: absolute;
+}
+
+.active {
+   
+    transform: translateX(0);
+}
+/****************************************************** commande ****************************************/
+#Commande{
+    background-color: rgb(0, 0, 0,.4);
+    overflow-y: scroll;
+    height: 79%;
+    
+}
+
+#Commande a{
+    color: var(--white);
+    text-align: end;
+    display: block;
+}
+
+#Commande .cadreCommande{
+    color: #000000;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 15px;
+    background-color: #d6f4ff;
+}
+
+.cadreCommande h3{
+    text-align: center;
+}
+
+.cadreCommande .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadreCommande .btn button{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 90%;
+    max-width: 600px;
+    transition: background-color 0.3s;
+}
+
+.cadreCommande .btn button:hover{
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.red{
+    color: #df1c1c;
+}
+.green{
+    color: green;
+}
+
+
+
+
+/***************************************************Catalogue **********************************/
+
+#PlatJour{
+    background-color: rgb(0, 0, 0,.4);
+    overflow-y: scroll;
+    height: 79%;
+}
+
+#PlatJour{
+    color: var(--white);
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Scrollable container */
+.items {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.items::-webkit-scrollbar {
+    height: 8px;
+}
+
+.items::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+
+.item {
+    background-color: white;
+    height: 450px;
+    padding: 0rem 0rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Largeur minimale pour assurer un bon alignement */
+    flex: 0 0 auto; /* Empêche les éléments de rétrécir */
+    
+}
+
+.item img {
+    
+    height: 200px;
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.item h3 {
+    height: 30px;
+    
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: black;
+    
+}
+
+.item p {
+    height: 120px;
+    overflow-y: scroll;
+    padding:0 20px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.commander{
+  
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+  
+  
+
+.order-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.order-button:hover {
+    background-color: rgb(243, 253, 179);
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+    }
+    .back-button {
+        order: -1;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*********************************************** Section Message recu***********************************/
+
+
+#MessageReçu{
+    background-color: rgb(0, 0, 0,.4);
+    overflow-y: scroll;
+    height: 79%;
+}
+
+#MessageReçu h2{
+    color: white;
+}
+
+#MessageReçu .msg{
+    color: #000000;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 15px;
+    background-color: #d6f4ff;
+}
+
+
+/*********************************************** Section Fenetre ************************************************/
+
+
+
+
+
+
+
+.black{
+    color: black;
+}
+  
+  .white{
+    color: white;
+  }
+  
+  
+  .commander{
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  @keyframes none {
+    0%{
+      display: none;
+    }
+  
+    100%{
+      display: flex;
+    }
+  }
+  
+  #PlatJour .btn {
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--tertiary-color);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    
+  }
+  
+  .modal-content {
+    position: relative;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .modal input,
+  .modal textarea,
+  .modal select {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 65%;
+    max-width: 250px;
+  }
+  
+  
+  
+  
+  
+  .modal .comp{
+    width: 100%;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal button {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  @media (width < 568px){
+    .modal .comp{
+      width: 100%;
+      display: flex ;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .modal input,
+    .modal textarea {
+      margin: 10px 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 50%;
+      max-width: 200px;
+    }
+  }
+  
+  .modal details{
+    width: 100%;
+    color: #614fff;
+    
+    text-align: justify;
+    font-size: 12px;
+  }
+  
+  .modal details summary{
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .modal details p{
+    color: #212529;
+  }
+  
+  .modal details p a{
+    color: blue;
+  }
